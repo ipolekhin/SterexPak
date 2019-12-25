@@ -9,34 +9,38 @@
   <body>
     <header class="page-header">
       <div class="container">
-        <div class="row d-flex justify-content-between align-items-center">
-          <nav class="main-nav d-flex align-items-center">
-            <a class="main-nav__logo">
-              <img src="img/logo.png" alt="Завод по производству асептической упковки «SterexPak»" width="134" height="33">
+        <div class="row">
+          <nav class="navbar navbar-expand-md w-100">
+            <a class="navbar-brand page-header__logo ml-1">
+              <img src="img/logo.png" alt="Завод по производству асептической упковки «SterexPak»" width="117" height="28">
             </a>
 
-            <button class="main-nav__toggle d-none" type="button">Открыть меню</button>
+            <button class="navbar-toggler page-header__navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false">
+              <img src="img/mobile-menu.svg" alt="Иконка мобильного меню" width="42" height="10">
+            </button>
 
-            <ul class="main-nav__list nav">
-              <li class="nav-item">
-                <a class="nav-link active" href="catalog.html">О компании</a>
-              </li>
+            <div class="collapse navbar-collapse" id="navbar-menu">
+              <ul class="main-nav__list navbar-nav ml-1 mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="catalog.html">О компании</a>
+                </li>
 
-              <li class="nav-item">
-                <a class="nav-link" href="product.html">Продукция</a>
-              </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="product.html">Продукция</a>
+                </li>
 
-              <li class="nav-item">
-                <a class="nav-link" href="news.html">Новости</a>
-              </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="news.html">Новости</a>
+                </li>
 
-              <li class="nav-item">
-                <a class="nav-link" href="contacts.html">Контакты</a>
-              </li>
-            </ul>
+                <li class="nav-item">
+                  <a class="nav-link" href="contacts.html">Контакты</a>
+                </li>
+              </ul>
+
+              <a class="page-header__contacts" href="tel:+74956605850"> +7 495 660 58 50</a>
+            </div>
           </nav>
-
-          <a class="page-header__contacts" href="tel:+74956605850"> +7 495 660 58 50</a>
         </div>
       </div>
     </header>
@@ -48,15 +52,15 @@
         <div class="pack__wrapper">
           <div class="container">
             <div class="row">
-              <div class="pack__wrapper--header col-5">
+              <div class="pack__wrapper--header">
                 <h2 class="pack__slogan">
                   <span>Сохраняя</span>
                   <span>Родное</span>
                 </h2>
 
-                <p class="pack__text">Современный завод асептической упаковки в самом сердце республики Башкортостан.</p>
+                <img class="pack__image" src="img/pack-image.png" alt="Упаковка" width="338" height="442">
 
-                <img src="img/pack-image.png" alt="Упаковка" width="589" height="815">
+                <p class="pack__text">Современный завод асептической упаковки в самом сердце республики Башкортостан.</p>
               </div>
             </div>
           </div>
@@ -67,25 +71,45 @@
         <div class="container">
           <div class="row">
             <h2 class="d-none">Коротко о нас</h2>
-            <ul class="advantages__list d-flex justify-content-between w-100">
-              <li class="advantages__item col-4 text-center">
-                <p class="advantages__top">Пять миллионов</p>
-                <p class="advantages__middle">5.000.000</p>
-                <p class="advantages__bottom">Упаковок в&nbsp;день</p>
-              </li>
+            <div class="carousel slide carousel-fade w-100 d-md-none" data-ride="carousel">
+              <ul class="carousel-inner advantages__list">
+                <li class="carousel-item advantages__item text-center active">
+                  <p class="advantages__top">Пять миллионов</p>
+                  <p class="advantages__middle">5.000.000</p>
+                  <p class="advantages__bottom">Упаковок в&nbsp;день</p>
+                </li>
+                <li class="carousel-item advantages__item text-center">
+                  <p class="advantages__top">На рынке</p>
+                  <p class="advantages__middle advantages__middle--normal">7 лет</p>
+                  <p class="advantages__bottom">Асептической упаковки</p>
+                </li>
+                <li class="carousel-item advantages__item text-center">
+                  <p class="advantages__top">Современное производство</p>
+                  <p class="advantages__middle d-flex justify-content-center align-items-center"><span>менее</span> 1%</p>
+                  <p class="advantages__bottom d-flex justify-content-center align-items-center">Отходов!</p>
+                </li>
+              </ul>
+            </div>
 
-              <li class="advantages__item col-4 text-center">
-                <p class="advantages__top">На рынке</p>
-                <p class="advantages__middle advantages__middle--normal">7 лет</p>
-                <p class="advantages__bottom">Асептической упаковки</p>
-              </li>
-
-              <li class="advantages__item col-4 text-center">
-                <p class="advantages__top">Современное производство</p>
-                <p class="advantages__middle d-flex justify-content-center align-items-center"><span>менее</span> 1%</p>
-                <p class="advantages__bottom d-flex justify-content-center align-items-center">Отходов!</p>
-              </li>
-            </ul>
+            <div class="w-100 d-none d-md-block">
+              <ul class="advantages__list d-md-flex">
+                <li class="advantages__item flex-md-fill text-center active">
+                  <p class="advantages__top">Пять миллионов</p>
+                  <p class="advantages__middle">5.000.000</p>
+                  <p class="advantages__bottom">Упаковок в&nbsp;день</p>
+                </li>
+                <li class="advantages__item flex-md-fill text-center">
+                  <p class="advantages__top">На рынке</p>
+                  <p class="advantages__middle advantages__middle--normal">7 лет</p>
+                  <p class="advantages__bottom">Асептической упаковки</p>
+                </li>
+                <li class="advantages__item flex-md-fill text-center">
+                  <p class="advantages__top">Современное производство</p>
+                  <p class="advantages__middle d-flex justify-content-center align-items-center"><span>менее</span> 1%</p>
+                  <p class="advantages__bottom d-flex justify-content-center align-items-center">Отходов!</p>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -116,23 +140,22 @@
 
       <section class="about">
         <div class="container">
-          <div class="row">
-            <div class="col-5 p-0">
-              <h2 class="d-none">О компании</h2>
-              <img src="img/logo-big.png" alt="Большой логотип" width="333" height="338">
-              <p class="about__contacts">453149, республика Башкортостан, Стерлитамакский район, село Большой Куганак, улица Мажита Гафури, дом 24</p>
-            </div>
-            <div class="col-7 p-0">
-              <div class="about__text">
-                <p>Основанный в 2017 году завод нулевого цикла «Стерэкс Пак» стал новым этапом развития двух успешных компаний с богатой историей в отрасли упаковки: «СИАФ-Прибор» и
-                  «Орбита-Ф».</p>
-
-                <p>Основными направлением деятельности компании «Стерэкс Пак» стало производство современной асептической упаковки для длительного хранения жидких молочных продуктов, соков, вина.</p>
-
-                <p>Начав в 2012 году производство асептической упаковки на предприятии Орбита-Ф, и со временем исчерпав производственные мощности, руководством компаний было принято решение выделить и развить направление асептической упаковки в отдельное предприятие «Стерэкс Пак», оснастив завод самыми современными технологиями и оборудованием производства Германии и Австрии. Так в 2016 году было начато проектирование предприятия, а уже в 2017 был заложен первый камень будущего ультрасовременного завода мирового уровня в селе Большой Куганак, Стерлитамакского района.</p>
+          <div class="about__wrapper">
+            <div class="row">
+              <div class="col-5 p-0  d-none d-md-block">
+                <h2 class="d-none">О компании</h2>
+                <img src="img/logo-big.png" alt="Большой логотип" width="333" height="338">
+                <p class="about__contacts">453149, республика Башкортостан, Стерлитамакский район, село Большой Куганак, улица Мажита Гафури, дом 24</p>
               </div>
-              <div class="about__video d-none">
-                <img src="img/about-video.png">
+              <div class="col-12 col-md-7 p-0">
+                <div class="about__text">
+                  <p>Основанный в 2017 году завод нулевого цикла «Стерэкс Пак» стал новым этапом развития двух успешных компаний с богатой историей в отрасли упаковки: «СИАФ-Прибор» и
+                    «Орбита-Ф».</p>
+
+                  <p>Основными направлением деятельности компании «Стерэкс Пак» стало производство современной асептической упаковки для длительного хранения жидких молочных продуктов, соков, вина.</p>
+
+                  <p>Начав в 2012 году производство асептической упаковки на предприятии Орбита-Ф, и со временем исчерпав производственные мощности, руководством компаний было принято решение выделить и развить направление асептической упаковки в отдельное предприятие «Стерэкс Пак», оснастив завод самыми современными технологиями и оборудованием производства Германии и Австрии. Так в 2016 году было начато проектирование предприятия, а уже в 2017 был заложен первый камень будущего ультрасовременного завода мирового уровня в селе Большой Куганак, Стерлитамакского района.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -156,7 +179,7 @@
         <div class="container">
           <div class="row">
             <div class="col-12 p-0">
-              <header class="structure__header">
+              <header class="structure__header d-none d-xl-block">
                 <h2 class="structure__title">Продукция</h2>
                 <p class="">Мы предлагаем пятислойную асептическую упаковку «SterexPak», которая позволит сохранить продукты свежими и безопасными без добавления консервантов. А привлекательный внешний вид и красочный дизайн помогут вам выделиться на полках в магазине.</p>
               </header>
@@ -167,20 +190,18 @@
         <div class="structure__view">
           <div class="container">
             <div class="row">
-              <div class="col-5 p-0">
-                <div class="structure__pack">
-                  <span>СОСТАВ УПАКОВКИ SterexPak</span>
-                </div>
-              </div>
-              <div class="col-7 p-0">
-                <img class="structure__pack-image" src="img/structure-image2.png" alt="фото" width="846" height="936">
-                <ul class="structure__list d-flex flex-column justify-content-around h-100">
+              <div class="structure__wrapper d-flex flex-wrap w-100">
+                <img class="structure__pack-svg" src="img/text-stucture-rotate.svg" alt="Упаковка" height="435" width="92">
+
+                <img class="structure__pack-image" src="img/structure-image3.png" alt="фото" width="740" height="814">
+
+                <ol class="structure__list">
                   <li class="structure__item">Внешний слой полиэтилена.</li>
                   <li class="structure__item">Картон.</li>
                   <li class="structure__item">Связующий слой полиэтилена.</li>
                   <li class="structure__item">Алюминий.</li>
                   <li class="structure__item">Внутренний слой полиэтилена.</li>
-                </ul>
+                </ol>
               </div>
             </div>
           </div>
@@ -195,11 +216,11 @@
                 Мы готовы предложить следующие виды упаковок:
               </div>
               <ul class="offers__list">
-                <li class="offers__item">Sterex Kvint Aseptic 1000 ml — аналог Tetra Pak Tetra Fino Aseptic</li>
-                <li class="offers__item">Sterex Brick Aseptic 1000 ml — аналог Tetra Pak Tetra Brik Aseptic Base</li>
-                <li class="offers__item">Sterex Brick 1000 ml — аналог Tetra Pak Tetra Brick Base</li>
-                <li class="offers__item">Sterex Slim Aseptic 1000 ml — аналог Tetra Pak Tetra Brik Aseptic Slim</li>
-                <li class="offers__item">Sterex Slim 1000 ml — аналог Tetra Pak Tetra Brik Slim</li>
+                <li class="offers__item">Sterex Kvint Aseptic 1000 ml</li>
+                <li class="offers__item">Sterex Brick Aseptic 1000 ml</li>
+                <li class="offers__item">Sterex Brick 1000 ml</li>
+                <li class="offers__item">Sterex Slim Aseptic 1000 ml</li>
+                <li class="offers__item">Sterex Slim 1000 ml</li>
               </ul>
             </div>
           </div>
@@ -215,7 +236,7 @@
               <img src="img/logo-footer.png" alt="Логотип footer" width="174" height="168">
             </a>
 
-            <div class="page-footer__navigation d-flex justify-content-center">
+            <div class="page-footer__navigation d-none d-lg-flex justify-content-center">
               <ul class="page-footer__list d-flex">
                 <li>
                   <a class="active" href="about.html">О компании</a>
@@ -262,5 +283,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
