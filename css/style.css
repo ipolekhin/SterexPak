@@ -441,8 +441,7 @@ img {
   color: #ffffff;
   background: radial-gradient(50% 50% at 50% 50%, #0092F2 27.6%, #006BE9 100%); }
   .structure__view img {
-    display: block;
-    position: relative; }
+    display: block; }
 
 .structure__pack-svg {
   margin-left: 12px;
@@ -450,6 +449,7 @@ img {
   width: 7%; }
 
 .structure__pack-image {
+  position: relative;
   margin-top: -14px;
   margin-left: -34px;
   width: 90%; }
