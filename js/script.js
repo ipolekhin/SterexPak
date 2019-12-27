@@ -25,39 +25,39 @@ $(function() {
   });
 
   //Показать весь текст скрыть
-  if (window.innerWidth < 576) {
-    var mobileAboutText = document.querySelectorAll('.about__text p');
-    var showAllText = document.querySelector('.show-all-text');
-
-    if (mobileAboutText && showAllText) {
+  // if (window.innerWidth < 576) {
+  //   var mobileAboutText = document.querySelectorAll('.about__text p');
+  //   var showAllText = document.querySelector('.show-all-text');
+  //
+  //   if (mobileAboutText && showAllText) {
 
       //функция - скрыть все параграфы начиная со первого i - итыый параграф
-      var listAboutText = function (display) {
-        for (var i = 0; i < mobileAboutText.length; i++) {
-          if (i > 0) {
-            mobileAboutText[i].style.display = display;
-          }
-        }
-      };
-
-
-      listAboutText('none');
+      // var listAboutText = function (display) {
+      //   for (var i = 0; i < mobileAboutText.length; i++) {
+      //     if (i > 0) {
+      //       mobileAboutText[i].style.display = display;
+      //     }
+      //   }
+      // };
+      //
+      //
+      // listAboutText('none');
 
       //событие клик, показать скрыть параграфы
-      showAllText.addEventListener('click', function (e) {
-        e.preventDefault();
-        if (showAllText.classList.contains('show')) {
-          showAllText.classList.remove('show');
-
-          listAboutText('none');
-        } else {
-          showAllText.classList.add('show');
-
-          listAboutText('block');
-        }
-      });
-    }
-  }
+  //     showAllText.addEventListener('click', function (e) {
+  //       e.preventDefault();
+  //       if (showAllText.classList.contains('show')) {
+  //         showAllText.classList.remove('show');
+  //
+  //         listAboutText('none');
+  //       } else {
+  //         showAllText.classList.add('show');
+  //
+  //         listAboutText('block');
+  //       }
+  //     });
+  //   }
+  // }
 
   $('.show-all-courses').click(function (e) {
     e.preventDefault();
