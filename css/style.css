@@ -147,6 +147,27 @@ img {
   max-width: 100%;
   height: auto; }
 
+.show-all-text {
+  display: block;
+  margin: 0 auto;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg); }
+  .show-all-text:focus {
+    outline: none; }
+  .show-all-text.show {
+    -webkit-transform: rotate(225deg);
+            transform: rotate(225deg); }
+
+@media (min-width: 576px) {
+  .show-all-text {
+    display: none; } }
+
 .page-header {
   padding: 10px 0;
   min-height: 85px; }
@@ -374,6 +395,10 @@ img {
 
 .about__text {
   margin: 0; }
+
+@media (min-width: 576px) {
+  .about__text p {
+    display: block; } }
 
 @media (min-width: 992px) {
   .about__wrapper {

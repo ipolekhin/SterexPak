@@ -1,15 +1,5 @@
 $(function() {
 
-  //Запуск карусели для планшета и мобильной версии
-  if (window.innerWidth < 768) {
-    console.log('карусель');
-    var caruseladvantageslist = document.querySelector('.advantages__list')
-    if (caruseladvantageslist) {
-      // caruseladvantageslist.classList.add('carousel');
-      console.log('карусель1');
-    }
-  }
-
   var owl = $('.owl-carousel');
   owl.owlCarousel({
     autoWidth: true,
@@ -31,6 +21,52 @@ $(function() {
       991: {
         items: 2,
       }
+    }
+  });
+
+  //Показать весь текст скрыть
+  if (window.innerWidth < 576) {
+    var mobileAboutText = document.querySelectorAll('.about__text p');
+    var showAllText = document.querySelector('.show-all-text');
+
+    if (mobileAboutText && showAllText) {
+
+      //функция - скрыть все параграфы начиная со первого i - итыый параграф
+      var listAboutText = function (display) {
+        for (var i = 0; i < mobileAboutText.length; i++) {
+          if (i > 0) {
+            mobileAboutText[i].style.display = display;
+          }
+        }
+      };
+
+
+      listAboutText('none');
+
+      //событие клик, показать скрыть параграфы
+      showAllText.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (showAllText.classList.contains('show')) {
+          showAllText.classList.remove('show');
+
+          listAboutText('none');
+        } else {
+          showAllText.classList.add('show');
+
+          listAboutText('block');
+        }
+      });
+    }
+  }
+
+  $('.show-all-courses').click(function (e) {
+    e.preventDefault();
+    $(this).siblings('.courses-item').toggleClass('show');
+    $(this).toggleClass('show');
+    if ($(this).hasClass('show')) {
+      $(this).text('Скрыть курсы');
+    } else {
+      $(this).text('Посмтреть все курсы');
     }
   });
 
