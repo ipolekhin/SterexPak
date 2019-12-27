@@ -340,13 +340,17 @@ img {
 .gallery__list {
   position: relative; }
   .gallery__list img {
-    min-height: 320px;
-    min-width: 320px; }
+    width: 320px !important;
+    height: 320px;
+    -o-object-fit: cover;
+       object-fit: cover; }
 
 @media (min-width: 992px) {
   .gallery__list img {
-    min-height: 360px;
-    min-width: 360px; } }
+    width: 360px !important;
+    height: 360px;
+    -o-object-fit: cover;
+       object-fit: cover; } }
 
 .about {
   padding-top: 1px;
